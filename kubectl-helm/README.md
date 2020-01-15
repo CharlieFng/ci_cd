@@ -9,8 +9,8 @@
 
 
 # Spin up your docke instance with *kubectl*, *helm* and *make* capabilities
-## Fetch remote image from docker hub
-`docker run -it -v $PWD/.kube:/bamboo/.kube --rm charliefeng/kubectl-helm:latest`
+## Fetch remote image from artifactory
+`docker run -it -v $PWD/.kube:/bamboo/.kube --rm docker-arrow.anzgcis.com/kubectl-helm:latest`
 
 OR
 
