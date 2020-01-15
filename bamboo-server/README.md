@@ -10,8 +10,8 @@
 `docker build -t bamboo-docker:latest .`
 
 # Spin up your docker bamboo instance
-## Fetch remote image from docker hub
-`docker run -v /var/run/docker.sock:/var/run/docker.sock -v bambooVolume:/var/atlassian/application-data/bamboo --name="bamboo-docker" --init -d -p 54663:54663 -p 8085:8085 charliefeng/bamboo-docker:latest`
+## Fetch remote image from artifactory
+`docker run -v /var/run/docker.sock:/var/run/docker.sock -v bambooVolume:/var/atlassian/application-data/bamboo --name="bamboo-docker" --init -d -p 54663:54663 -p 8085:8085 docker-arrow.anzgcis.com/bamboo-docker:latest`
 
 OR
 
@@ -24,4 +24,6 @@ OR
 
 ## Follow bamboo guideline to generate a trial license key
 [Login to Atlassian with your email account to generate New Trial License](https://my.atlassian.com/products/)
+
+## Choose Express Installation
 
