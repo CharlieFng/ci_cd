@@ -1,4 +1,6 @@
 ## Make sure local minikue and bamboo server are up
+`minikube status`
+[Bamboo dashbaord](http://localhost:8085)
 
 ## Remote local cached images since we need to use kubectl 1.14 +
 ```
