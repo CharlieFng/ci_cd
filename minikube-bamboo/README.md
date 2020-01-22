@@ -1,8 +1,10 @@
 ## Make sure local minikue and bamboo server are up
 
 ## Remote local cached images since we need to use kubectl 1.14 +
-`docker rmi docker-arrow.anzgcis.com/kubectl-helm:latest`
-`docker rmi charliefeng/kubectl-helm:latest`
+```
+docker rmi docker-arrow.anzgcis.com/kubectl-helm:latest
+docker rmi charliefeng/kubectl-helm:latest
+```
 
 ## Provision a admin servce account  
 `kubectl apply -f sa-admin.yaml`
