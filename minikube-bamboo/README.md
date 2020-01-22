@@ -1,5 +1,7 @@
 ## Make sure local minikue and bamboo server are up
-`minikube status`
+```
+minikube status
+```
 [Bamboo dashbaord](http://localhost:8085)
 
 ## Remote local cached images since we need to use kubectl 1.14 +
@@ -19,7 +21,7 @@ docker rmi charliefeng/kubectl-helm:latest
 
 ## Use kubectl-helm to validate the kube config file 
 ```
-docker run -it -v $PWD/.kube:/bamboo/.kube --rm docker-arrow.anzgcis.com/kubectl-helm:latest`
+docker run -it -v $PWD/.kube:/bamboo/.kube --rm docker-arrow.anzgcis.com/kubectl-helm:latest
 kubectl get node
 ```
 
@@ -31,5 +33,8 @@ minikube ip
 http://minikube_ip:32000
 ```
 
-## Delete Wordpress application (under wordpress folder)
-`kubectl delete -k ./`
+## Delete Wordpress application and clear cluster
+```
+kubectl delete -k wordpress/
+kubectl delete -f sa-admin.yaml
+``` 
